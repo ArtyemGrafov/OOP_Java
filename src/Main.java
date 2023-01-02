@@ -1,11 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        People man1 = new People();
-        People.sayHi(man1);
-        People man2 = new People("DanBalan", "male", 22);
-        People.sayHi(man2);
-        People man3 = new People("Dasha", "female", 33);
-        man3.setGender("male");
+        Human man1 = new Human();
+        Human.sayHi(man1);
+        Human man2 = new Human("DanBalan", "male", 22);
+        Human.sayHi(man2);
+        Human man3 = new Human("Dasha", "female", 33);
+
+        Human.sayHi(man3);
 
         System.out.println(man1);
         System.out.println(man2);

@@ -1,25 +1,22 @@
-import java.util.Date;
+public class Human {
 
-public class People {
     private static int counter = 0;
-    private Integer ID;
+    private final Integer ID;
     private String name;
-    private String gender;
+    private final Gender gender;
     private Integer age;
 
-    public People() {
-        this.ID = counter;
-        counter++;
+    public Human() {
+        this.ID = counter++;
         this.name = "noName";
-        this.gender = "noGender";
+        this.gender = null;
         this.age = 0;
     }
 
-    public People(String name, String gender, Integer age) {
-        this.ID = counter;
-        counter++;
+    public Human(String name, String gender, Integer age) {
+        this.ID = counter++;
         this.name = name;
-        this.gender = gender;
+        this.gender = Gender.stringToEnum(gender);
         this.age = age;
     }
 
@@ -31,7 +28,7 @@ public class People {
         return name;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
@@ -43,15 +40,11 @@ public class People {
         this.name = name;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public void setAge(Integer age) {
         this.age = age;
     }
 
-    public static void sayHi(People people){
+    public static void sayHi(Human people){
         System.out.println(people.getName() + "   created !");
     }
 
