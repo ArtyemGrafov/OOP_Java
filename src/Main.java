@@ -26,5 +26,6 @@ public class Main {
         Parents mother1 = new Parents("mother1", "female", 44, man1, man2,
                                         kids);
         System.out.println(mother1);
+        System.out.println(mother1.getChildren());
     }
 }
