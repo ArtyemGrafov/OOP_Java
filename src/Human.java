@@ -4,7 +4,7 @@ public class Human {
     private final Integer ID;
     private String name;
     private final Gender gender;
-    private Integer age;
+    private final Integer age;
 
     public Human() {
         this.ID = counter++;
@@ -40,11 +40,7 @@ public class Human {
         this.name = name;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public static void sayHi(Human people){
+    public static void sayHi(Human people) {
         System.out.println(people.getName() + "   created !");
     }
 
