@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Human man1 = new Human();
@@ -17,5 +19,12 @@ public class Main {
         System.out.println(child1.getName());
         child1.setFather(new Human("newFather", "male", 77));
         System.out.println(child1);
+        Children child2 = new Children("AAA", "female", 34, man3, man2);
+        ArrayList<Children> kids = new ArrayList<>();
+        kids.add(child1);
+        kids.add(child2);
+        Parents mother1 = new Parents("mother1", "female", 44, man1, man2,
+                                        kids);
+        System.out.println(mother1);
     }
 }
