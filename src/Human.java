@@ -1,4 +1,4 @@
-public class Human {
+public class Human implements HumanI {
 
     private static int counter = 0;
     private final Integer ID;
@@ -40,9 +40,7 @@ public class Human {
         this.name = name;
     }
 
-    public static void sayHi(Human people) {
-        System.out.println(people.getName() + "   created !");
-    }
+
 
     @Override
     public String toString() {
@@ -53,4 +51,20 @@ public class Human {
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public void printOb() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toStringOb() {
+        return HumanI.super.toStringOb();
+    }
+
+    @Override
+    public String getData() {
+        return name + " " + gender + " " + age +" !";
+    }
+
 }
