@@ -30,5 +30,9 @@ public class Main {
         mother1.printOb();
 
         System.out.println(child1.getData());
+
+
+        HumanI humanI = child1.getFather();
+        System.out.println(humanI.getData());
     }
 }
