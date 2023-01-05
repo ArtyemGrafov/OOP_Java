@@ -1,3 +1,5 @@
+import java.util.function.Function;
+
 public interface HumanI {
     void printOb();
     default String toStringOb() {

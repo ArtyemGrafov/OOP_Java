@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,5 +38,19 @@ public class Main {
 
         HumanI humanI = child1.getFather();
         System.out.println(humanI.getData());
+
+        Supplier<Human> humanSupplier = () -> {
+            Human human = new Children("sd", "male", 0,
+                            new Human("mather123", "female", 44),
+                            new Human("father123", "male", 55));
+            return human;
+        };
+
+        Human newKid = humanSupplier.get();
+        System.out.println(newKid);
+
+        BinaryOperator<Integer> sumAge = (age1, age2) -> age1 + age2;
+        System.out.println(sumAge.apply(child1.getAge(), child2.getAge()));
     }
+
 }

@@ -1,4 +1,4 @@
-public class Children extends Human {
+public class Children extends Human{
 
     private Human mother;
     private Human father;
